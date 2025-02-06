@@ -1,0 +1,13 @@
+[Unit]
+Description=DirX Organizer - Automatic File Sorting
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/watcher
+Restart=always
+User=$USER
+WorkingDirectory=/usr/local/bin
+
+[Install]
+WantedBy=default.target
