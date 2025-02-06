@@ -1,22 +1,17 @@
 #!/bin/bash
 
-INSTALL_DIR="/usr/local/bin"
-SERVICE_FILE="/etc/systemd/system/dirx.service"
-
 echo "Uninstalling DirX Organizer..."
 
+# Define paths
+INSTALL_DIR="$HOME/.local/bin"
+SERVICE_DIR="$HOME/.config/systemd/user"
+
 # Stop and disable the service
-sudo systemctl stop dirx.service
-sudo systemctl disable dirx.service
+systemctl --user stop dirx.service
+systemctl --user disable dirx.service
+rm -f "$SERVICE_DIR/dirx.service"
 
 # Remove scripts
-sudo rm -f "$INSTALL_DIR/dirx"
-sudo rm -f "$INSTALL_DIR/watcher"
+rm -f "$INSTALL_DIR/dirx.sh" "$INSTALL_DIR/watcher.sh"
 
-# Remove systemd service file
-sudo rm -f "$SERVICE_FILE"
-
-# Reload systemd daemon
-sudo systemctl daemon-reload
-
-echo "DirX Organizer has been successfully uninstalled."
+echo "Uninstallation complete!"
