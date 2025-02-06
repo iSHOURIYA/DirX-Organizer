@@ -1,15 +1,14 @@
 [Unit]
 Description=DirX Organizer - Automatic File Sorting
-After=network.target
+After=default.target
 
 [Service]
-Type=simple
-ExecStart=/usr/local/bin/watcher.sh
-WorkingDirectory=/usr/local/bin
-Environment="HOME=%h"
-User=%i
+ExecStart=%h/.local/bin/watcher.sh
+WorkingDirectory=%h/.local/bin
 Restart=always
 RestartSec=5s
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=default.target
