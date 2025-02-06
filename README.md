@@ -1,4 +1,3 @@
-```markdown
 # DirX Organizer  
 
 <p align="center">
@@ -15,7 +14,7 @@
   ____  _  _  __  ____     ╭───────────────────────────╮
  (  _ \( \/ )(  )(_  _)    │  Automated File Organizer │
   )   / )  (  )(   )(     ╰───────────────────────────╯
- (__\_)(_/\_)(__) (__)    
+ (__\_)(_\/\_)(__) (__)    
 ```
 
 **DirX Organizer** is an automatic file organization tool designed for Ubuntu. It sorts files in your **Downloads** folder into categorized subdirectories like a digital Marie Kondo 📂✨!
@@ -136,5 +135,3 @@ Check out the [contributing guide](CONTRIBUTING.md) for details!
 
 MIT License © 2024 [ishouriya](https://github.com/ishouriya)  
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
-
-```
